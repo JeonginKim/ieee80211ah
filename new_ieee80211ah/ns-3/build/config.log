@@ -1,0 +1,721 @@
+# project ns (3-dev) configured on Sun Apr  9 14:08:52 2017 by
+# waf 1.8.12 (abi 98, python 2070cf0 on linux2)
+# using ./waf configure --disable-examples --disable-tests
+#
+----------------------------------------
+Setting top to
+/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3
+----------------------------------------
+Setting out to
+/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build
+----------------------------------------
+Checking for 'gcc' (C compiler)
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+/usr/bin/gcc
+----------------------------------------
+Checking for cc version
+5.4.0
+----------------------------------------
+Checking for 'g++' (C++ compiler)
+find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
+(tool ar is already loaded, skipping)
+/usr/bin/g++
+---------------------------------------------------------
+Checking for compilation flag -Wl,--soname=foo... support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_9dca2d986fc362e847e405e3833c1609/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_9dca2d986fc362e847e405e3833c1609/testbuild/test.cpp.1.o']
+ok
+---------------------------------------------------------
+Checking for program 'python'
+/usr/bin/python
+find program=['python'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python']
+['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
+err: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'get_tag'
+
+['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+7
+12
+final
+0
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/dist-packages'
+
+'/usr/local/lib/python2.7/dist-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/dist-packages'
+
+'/usr/local/lib/python2.7/dist-packages'
+
+---------------------------------------------------------
+Checking for python version
+(2, 7, 12, 'final', 0)
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
+out: '/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+''
+
+'/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+''
+
+Configuration returned from ['/usr/bin/python']:
+prefix = '/usr'
+SO = '.so'
+LDFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro'
+LIBDIR = '/usr/lib'
+LIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'
+INCLUDEPY = '/usr/include/python2.7'
+Py_ENABLE_SHARED = 1
+MACOSX_DEPLOYMENT_TARGET = ''
+LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+CFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+LDVERSION = ''
+
+---------------------------------------------------------
+python-config
+not found
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> None
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/bindings/python: Could not find the program ['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config']
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+---------------------------------------------------------
+Checking for library python2.7 in LIBDIR
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_f8363494e5097540112b053c2da97f8c/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_f8363494e5097540112b053c2da97f8c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f8363494e5097540112b053c2da97f8c/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_f8363494e5097540112b053c2da97f8c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+err: /usr/bin/ld: cannot find -lpython2.7
+collect2: error: ld returned 1 exit status
+
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140606400619152: cxxprogram test.cpp.1.o -> testprog}
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_f8363494e5097540112b053c2da97f8c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/bindings/python: The configuration failed
+
+
+# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
+
+---------------------------------------------------------
+Checking for library python2.7 in python_LIBPL
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_6fd6116fe885140cd8bcf01d1131599f/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_6fd6116fe885140cd8bcf01d1131599f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6fd6116fe885140cd8bcf01d1131599f/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_6fd6116fe885140cd8bcf01d1131599f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7']
+yes
+Include path for Python extensions (found via distutils module): '/usr/include/python2.7'
+
+---------------------------------------------------------
+Checking for header Python.h
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_45cc102e31f8b10ba1b71258aa4fc075/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_45cc102e31f8b10ba1b71258aa4fc075/testbuild/test.cpp.1.o']
+err: ../test.cpp:2:20: fatal error: Python.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140606400621200: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++0x', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_45cc102e31f8b10ba1b71258aa4fc075/testbuild/test.cpp.1.o']
+
+Distutils not installed? Broken python installation? Get python-config now!
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/bindings/python: The configuration failed
+---------------------------------------------------------
+Checking boost includes
+headers not found, please provide a --boost-includes argument (see help)
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src: The configuration failed
+---------------------------------------------------------
+Checking boost includes
+headers not found, please provide a --boost-includes argument (see help)
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src: The configuration failed
+---------------------------------------------------------
+Checking for click location
+not found
+---------------------------------------------------------
+Checking for program 'pkg-config'
+/usr/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+---------------------------------------------------------
+Checking for 'gtk+-2.0' >= 2.12
+['/usr/bin/pkg-config', '--atleast-version=2.12', 'gtk+-2.0']
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/config-store: The configuration failed
+---------------------------------------------------------
+Checking for 'libxml-2.0' >= 2.7
+['/usr/bin/pkg-config', '--atleast-version=2.7', 'libxml-2.0']
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/config-store: The configuration failed
+---------------------------------------------------------
+Checking for type uint128_t
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	if ((uint128_t *) 0) return 0;
+	if (sizeof (uint128_t)) return 0;
+	return 1;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e1810d18429f111565701f257763da67/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_e1810d18429f111565701f257763da67/testbuild/test.cpp.1.o']
+err: ../test.cpp: In function ‘int main(int, char**)’:
+../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
+  if ((uint128_t *) 0) return 0;
+       ^
+../test.cpp:5:18: error: expected primary-expression before ‘)’ token
+  if ((uint128_t *) 0) return 0;
+                  ^
+../test.cpp:5:20: error: expected ‘)’ before numeric constant
+  if ((uint128_t *) 0) return 0;
+                    ^
+../test.cpp:6:14: error: ‘uint128_t’ was not declared in this scope
+  if (sizeof (uint128_t)) return 0;
+              ^
+
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/core: Test does not build: Traceback (most recent call last):
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140606400771280: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_e1810d18429f111565701f257763da67/testbuild/test.cpp.1.o']
+
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/core: The configuration failed
+---------------------------------------------------------
+Checking for type __uint128_t
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	if ((__uint128_t *) 0) return 0;
+	if (sizeof (__uint128_t)) return 0;
+	return 1;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_eb199b862834d26367e70dffeeac5bec/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_eb199b862834d26367e70dffeeac5bec/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_eb199b862834d26367e70dffeeac5bec/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_eb199b862834d26367e70dffeeac5bec/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking high precision implementation
+128-bit integer (default)
+---------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_242d0cb75f8d02fbafea4fe234635c28/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_242d0cb75f8d02fbafea4fe234635c28/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_242d0cb75f8d02fbafea4fe234635c28/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_242d0cb75f8d02fbafea4fe234635c28/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_277873e32d356d6308ae350ffd5f44f8/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_277873e32d356d6308ae350ffd5f44f8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_277873e32d356d6308ae350ffd5f44f8/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_277873e32d356d6308ae350ffd5f44f8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_bf4c12ff26330dc79b2c5da727e870dc/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_bf4c12ff26330dc79b2c5da727e870dc/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/core: Test does not build: Traceback (most recent call last):
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140606400876688: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_bf4c12ff26330dc79b2c5da727e870dc/testbuild/test.cpp.1.o']
+
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/core: The configuration failed
+---------------------------------------------------------
+Checking for header sys/types.h
+==>
+#include <sys/types.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_7e8233df10db790bb4c2ce24c15d4ecd/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_7e8233df10db790bb4c2ce24c15d4ecd/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7e8233df10db790bb4c2ce24c15d4ecd/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_7e8233df10db790bb4c2ce24c15d4ecd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header sys/stat.h
+==>
+#include <sys/stat.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_2ba188b83b207ce505c56bd586fef8d5/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_2ba188b83b207ce505c56bd586fef8d5/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2ba188b83b207ce505c56bd586fef8d5/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_2ba188b83b207ce505c56bd586fef8d5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header dirent.h
+==>
+#include <dirent.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_5ef9136e918ac22afcdff4003c57e780/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_5ef9136e918ac22afcdff4003c57e780/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_5ef9136e918ac22afcdff4003c57e780/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_5ef9136e918ac22afcdff4003c57e780/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header stdlib.h
+==>
+#include <stdlib.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_30c820ad9e31faa7e977b1e8b18943c2/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_30c820ad9e31faa7e977b1e8b18943c2/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_30c820ad9e31faa7e977b1e8b18943c2/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_30c820ad9e31faa7e977b1e8b18943c2/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header signal.h
+==>
+#include <signal.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_6423da6072adccd981f2af2337dadf84/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_6423da6072adccd981f2af2337dadf84/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6423da6072adccd981f2af2337dadf84/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_6423da6072adccd981f2af2337dadf84/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header pthread.h
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_edc8cca15669df939ed05097559c6534/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-pthread', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_edc8cca15669df939ed05097559c6534/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_edc8cca15669df939ed05097559c6534/testbuild/testprog[0m
+
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_edc8cca15669df939ed05097559c6534/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_242d0cb75f8d02fbafea4fe234635c28/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_242d0cb75f8d02fbafea4fe234635c28/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_242d0cb75f8d02fbafea4fe234635c28/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_242d0cb75f8d02fbafea4fe234635c28/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_277873e32d356d6308ae350ffd5f44f8/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_277873e32d356d6308ae350ffd5f44f8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_277873e32d356d6308ae350ffd5f44f8/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_277873e32d356d6308ae350ffd5f44f8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_bf4c12ff26330dc79b2c5da727e870dc/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_bf4c12ff26330dc79b2c5da727e870dc/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/core: Test does not build: Traceback (most recent call last):
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140606400796240: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_bf4c12ff26330dc79b2c5da727e870dc/testbuild/test.cpp.1.o']
+
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/core: The configuration failed
+---------------------------------------------------------
+Checking for library rt
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_7bd57388a268ab0f076802d943f5fb22/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-pthread', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_7bd57388a268ab0f076802d943f5fb22/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7bd57388a268ab0f076802d943f5fb22/testbuild/testprog[0m
+
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_7bd57388a268ab0f076802d943f5fb22/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+yes
+---------------------------------------------------------
+Checking for header sys/ioctl.h
+==>
+#include <sys/ioctl.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_1dd43817c3f133bd3233cad64516d14b/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_1dd43817c3f133bd3233cad64516d14b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1dd43817c3f133bd3233cad64516d14b/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_1dd43817c3f133bd3233cad64516d14b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header net/if.h
+==>
+#include <net/if.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_99bd52a2430e019239d3226aa3e3b7db/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_99bd52a2430e019239d3226aa3e3b7db/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_99bd52a2430e019239d3226aa3e3b7db/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_99bd52a2430e019239d3226aa3e3b7db/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header net/ethernet.h
+==>
+#include <net/ethernet.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_bfea27fb460ba544ddde6228e95a9424/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_bfea27fb460ba544ddde6228e95a9424/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_bfea27fb460ba544ddde6228e95a9424/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_bfea27fb460ba544ddde6228e95a9424/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for header netpacket/packet.h
+==>
+#include <netpacket/packet.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e0d182f107811616ea2a67dc7784bef8/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_e0d182f107811616ea2a67dc7784bef8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e0d182f107811616ea2a67dc7784bef8/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_e0d182f107811616ea2a67dc7784bef8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for NSC location
+not found
+---------------------------------------------------------
+Checking for 'sqlite3'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'sqlite3']
+err: Package sqlite3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `sqlite3.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'sqlite3' found
+
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/src/stats: The configuration failed
+---------------------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/test.cpp[0m
+
+['/usr/bin/g++', '-std=c++0x', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_b698b04c35f8d5efcfa56cc0d6a99cc1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+---------------------------------------------------------
+Checking for program 'sudo'
+/usr/bin/sudo
+find program=['sudo'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
+---------------------------------------------------------
+Checking for program 'valgrind'
+not found
+find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> None
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3: Could not find the program ['valgrind']
+---------------------------------------------------------
+Checking for 'gsl'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
+err: Package gsl was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gsl.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gsl' found
+
+not found
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3: The configuration failed
+----------------------------------------------------------------
+Checking for compilation flag -Wno-error=deprecated-d... support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_58e244a2715d878149548c99bd8c6ef0/test.c[0m
+
+['/usr/bin/gcc', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_58e244a2715d878149548c99bd8c6ef0/testbuild/test.c.1.o']
+ok
+----------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing... support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_58e244a2715d878149548c99bd8c6ef0/test.c[0m
+
+['/usr/bin/gcc', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_58e244a2715d878149548c99bd8c6ef0/testbuild/test.c.1.o']
+ok
+----------------------------------------------------------------
+Checking for compilation flag -Wstrict-aliasing... support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_58e244a2715d878149548c99bd8c6ef0/test.c[0m
+
+['/usr/bin/gcc', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3/build/.conf_check_58e244a2715d878149548c99bd8c6ef0/testbuild/test.c.1.o']
+ok
+----------------------------------------------------------------
+Checking for program 'doxygen'
+not found
+find program=['doxygen'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> None
+from /media/sf_share/ns311ah_new_dynamic_collision_zero/ns-3: Could not find the program ['doxygen']
